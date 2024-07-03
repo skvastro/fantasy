@@ -8,7 +8,7 @@ from copy import deepcopy
 import pylab as plt
 from spectres import spectres
 from scipy import interpolate, linalg
-from scipy.integrate import simps
+from scipy.integrate import simpson
 from sherpa.data import Data1D
 from sherpa.fit import Fit
 from sherpa.optmethods import LevMar, NelderMead, MonCar, GridSearch
