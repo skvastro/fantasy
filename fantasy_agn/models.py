@@ -8,7 +8,6 @@ import pandas as pd
 from astropy.modeling.models import BlackBody
 from sherpa.models import model
 from sherpa.models.parameter import Parameter, tinyval
-from sherpa.utils.numeric_types import SherpaFloat
 from sherpa.utils import sao_fcmp
 
 __all__ = (
@@ -161,7 +160,7 @@ def continuum(spec,name='brokenpowerlaw', refer=5500, min_refer=5400, max_refer=
                     "model evaluation failed, " + "%s refer cannot be zero" % self.name
                 )
 
-            x = np.asarray(x, dtype=float)
+            x = np.asarray(x, dtype= float)
             arg = x / p[0]
             arg = p[1] * (
                 np.where(arg > 1.0, np.power(
