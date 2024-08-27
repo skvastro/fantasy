@@ -161,7 +161,7 @@ def continuum(spec,name='brokenpowerlaw', refer=5500, min_refer=5400, max_refer=
                     "model evaluation failed, " + "%s refer cannot be zero" % self.name
                 )
 
-            x = np.asarray(x, dtype=Float)
+            x = np.asarray(x, dtype=float)
             arg = x / p[0]
             arg = p[1] * (
                 np.where(arg > 1.0, np.power(
