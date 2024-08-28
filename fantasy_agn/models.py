@@ -190,7 +190,7 @@ def _feii(pars, x):
     """
     c = 299792.458
 
-    dft = pd.read_csv(path1 + "feII_model.csv")
+    dft = pd.read_csv("feII_model.csv")
 
     uniq = pd.unique(dft.ime)
     offs_kms = pars[len(uniq)]
@@ -218,7 +218,7 @@ def _feii(pars, x):
 
 class FeII(model.RegriddableModel1D):
     def __init__(self, name="feii"):
-        dft = pd.read_csv(path1 + "feII_model.csv")
+        dft = pd.read_csv("feII_model.csv")
 
         uniq = pd.unique(dft.ime)
         pars = []
@@ -249,7 +249,7 @@ class FeII(model.RegriddableModel1D):
 def _uv_feii(pars, x):
     c = 299792.458
 
-    dft = pd.read_csv(path1 + "uvfe.csv")
+    dft = pd.read_csv("uvfe.csv")
 
     uniq = pd.unique(dft.ime)
     offs_kms = pars[len(uniq)]
@@ -277,7 +277,7 @@ def _uv_feii(pars, x):
 
 class UV_FeII(model.RegriddableModel1D):
     def __init__(self, name="uv_feii"):
-        dft = pd.read_csv(path1 + "uvfe.csv")
+        dft = pd.read_csv("uvfe.csv")
 
         uniq = pd.unique(dft.ime)
         pars = []
