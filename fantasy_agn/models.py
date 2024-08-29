@@ -190,7 +190,7 @@ def _feii(pars, x):
     """
     c = 299792.458
 
-    dft = pd.read_csv("feII_model.csv")
+    dft = pd.read_csv(path1 + "feII_model.csv")
 
     uniq = pd.unique(dft.ime)
     offs_kms = pars[len(uniq)]
