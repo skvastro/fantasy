@@ -296,7 +296,7 @@ class spectrum(object):
         :param ntrial=1: Used to Specify the number of times we want to repeat the fit.
         :return: The results of the fit.
         """
-        stat=Cash()
+        stat=Chi2DataVar()
         method=LevMar()
         d = Data1D("AGN", self.wave, self.flux, self.err)
         gfit = Fit(d, model, stat=stat, method=method)
