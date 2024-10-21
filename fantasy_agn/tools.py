@@ -25,7 +25,7 @@ from RegscorePy import aic, bic
 import multiprocessing.pool
 import os
 
-script_dir = os.path.dirname(__file__)
+script_dir = os.path.dirname('/Downloads')
 sfdpath = os.path.join(script_dir, "sfddata")
 pathEigen = os.path.join(script_dir, "eigen/")
 import warnings
@@ -296,7 +296,7 @@ class spectrum(object):
         :param ntrial=1: Used to Specify the number of times we want to repeat the fit.
         :return: The results of the fit.
         """
-        stat=Chi2()
+        stat=Cash()
         method=LevMar()
         d = Data1D("AGN", self.wave, self.flux, self.err)
         gfit = Fit(d, model, stat=stat, method=method)
